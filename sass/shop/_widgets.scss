@@ -1,0 +1,204 @@
+/**
+ * WooCommerce select
+ */
+.woocommerce-page .select2-container--default .select2-selection--single {
+    outline: none;
+}
+
+.woocommerce-page .select2-container--default .select2-selection--single .select2-selection__arrow {
+    outline: none;
+}
+
+.woocommerce-page .select2-container--default .select2-results__option--highlighted[aria-selected],
+.woocommerce-page .select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: $color__main-secondary;
+    color: $color__text-main;
+    outline: none;
+}
+
+.woocommerce-page .select2-results__option[aria-selected], 
+.woocommerce-page .select2-results__option[data-selected] {
+    outline: none;
+}
+
+.woocommerce-page .select2-container--default .select2-selection--single .select2-selection__clear {
+    color: red;
+}
+
+/**
+ * WooCommerce Sidebar top
+ */
+.toolbar {
+    background: $color__bg-primary;
+    color: $color__text-heading;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+a.shop-filters-link {
+    height: 30px;
+    line-height: 30px;
+    @include font-size(1);
+    color: $color__text-heading;
+    font-weight: $font__bold;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    @media screen and (min-width: 375px) {
+        float: left;
+    }
+
+    &:hover {
+        color: $color__main-primary;
+    }
+    
+    &:before {
+        display: inline-block;
+        content: '\f00b';
+        font-family: 'FontAwesome';
+        @include font-size(1);
+        margin-right: 8px;
+        font-weight: $font__normal;
+    }
+    
+    &.filters-open {
+        color: $color__main-primary;
+        
+        &:before {
+            content: '\f05c';
+            @include font-size(1.2);
+        }
+    }
+}
+
+.toolbar-hidden {
+    display: none;
+    opacity: 0;
+    @include transition(.7s, opacity);
+    
+    &.visible {
+        opacity: 1;
+    }
+}
+
+.toolbar-widgets {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 320px;
+    margin: 0 auto;
+    
+    @media screen and (min-width: $bp__md) {
+        max-width: none;
+        margin: 0;
+    }
+    
+    .shop-toolbar__widget {
+        padding-top: 20px;
+        
+        @media screen and (min-width: $bp__md) {
+            padding-bottom: $padding__section;
+        }
+        
+        .widget-heading {
+            display: none;
+
+            @media screen and (min-width: $bp__md) {
+                display: block;
+            }
+        }
+        
+        .widget-title {
+            font-size: 1em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/**
+ * WooCommerce Price Filter
+ */
+.widget_price_filter {
+	.price_slider {
+		margin-bottom: 1.5em;
+	}
+
+	.price_slider_amount {
+		text-align: right;
+		line-height: 2.4em;
+
+		.button {
+                        @include font-size(0.875);
+                        background-color: $color__main-secondary;
+                        color: $color__text-heading;
+                        border-color: $color__main-secondary;
+                        padding: 15px 15px;
+                        opacity: .7;
+
+                        &:hover {
+                            background-color: $color__main-secondary;
+                            opacity: 1;
+                        }
+		}
+                
+                .price_label {
+                    color: $color__text-heading;
+                    font-weight: $font__bold;
+                    
+                    span {
+                        font-family: 'ALSRubl-Arial', Arial, sans-serif;
+                        font-weight: $font__normal;
+                    }
+                }
+	}
+
+	.ui-slider {
+		position: relative;
+		text-align: left;
+	}
+
+	.ui-slider .ui-slider-handle {
+		position: absolute;
+		z-index: 2;
+		width: 1em;
+		height: 1em;
+		cursor: ew-resize;
+		outline: none;
+		background: $color__link;
+		box-sizing: border-box;
+		margin-top: -.25em;
+		opacity: 1;
+
+		&:last-child {
+			margin-left: -1em;
+		}
+
+		&:hover,
+		&.ui-state-active {
+			box-shadow: 0 0 0 .25em rgba(#000, 0.1);
+		}
+	}
+
+	.ui-slider .ui-slider-range {
+		position: absolute;
+		z-index: 1;
+		display: block;
+		border: 0;
+		background: $color__link;
+	}
+
+	.price_slider_wrapper .ui-widget-content {
+		background: rgba(0,0,0,0.1);
+	}
+
+	.ui-slider-horizontal {
+		height: .5em;
+	}
+
+	.ui-slider-horizontal .ui-slider-range {
+		height: 100%;
+	}
+}

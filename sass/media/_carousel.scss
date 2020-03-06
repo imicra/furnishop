@@ -1,0 +1,58 @@
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+ul.products .carousel li.product .product-wrapper .onsale {
+        padding: 0;
+    }
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    text-align: center;
+    color: $color__main-black;
+    background: #fff;
+    width: 34px;
+    height: 34px;
+    line-height: 36px;
+    @include font-size(0.875);
+    border-radius: 50%;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    @include transition();
+    
+    &:hover {
+        color: $color__main-primary;
+    }
+    
+    .woocommerce-page & {
+        display: block;
+        
+        @media screen and (min-width: $bp__md) {
+            display: none;
+        }
+    }
+
+    &.button-prev {
+        left: 0;
+
+        &:before {
+            content: "\f053";
+            font-family: 'FontAwesome';
+            margin-right: 3px;
+        }
+    }
+
+    &.button-next {
+        right: 0;
+
+        &:before {
+            content: "\f054";
+            font-family: 'FontAwesome';
+            margin-left: 3px;
+        }
+    }
+}

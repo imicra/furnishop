@@ -1,0 +1,59 @@
+.topbar {
+    background: $color__bg-primary;
+}
+
+.topbar-widget-area {
+    
+    @media screen and (min-width: $bp__lg) {
+        display: none;
+    }
+}
+
+.header-social {
+    display: none;
+    
+    @media screen and (min-width: $bp__lg) {
+        display: block;
+    }
+}
+
+.header-branding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    @media screen and (min-width: $bp__lg) {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+.navbar-shop {
+    background: $color__bg-primary;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    @media screen and (min-width: $bp__lg) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+/*
+Header Menu
+*/
+@import "header-menu";
+
+/*
+Header Social
+*/
+@import "header-social";
+
+/*
+Header Branding
+*/
+@import "header-branding";
+
+/*
+Header Catalog
+*/
+@import "header-shopbar";

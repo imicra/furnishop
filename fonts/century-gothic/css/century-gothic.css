@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/century-gothic_regular.eot'); /* IE9 Compat Modes */
+  src: url('../font/century-gothic_regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/century-gothic_regular.woff') format('woff'), /* Modern Browsers */
+       url('../font/century-gothic_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/century-gothic_regular.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/century-gothic_bold.eot'); /* IE9 Compat Modes */
+  src: url('../font/century-gothic_bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/century-gothic_bold.woff') format('woff'), /* Modern Browsers */
+       url('../font/century-gothic_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/century-gothic_bold.svg') format('svg'); /* Legacy iOS */
+}

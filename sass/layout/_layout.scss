@@ -1,0 +1,26 @@
+.woocommerce .site-main {
+    padding-bottom: ($padding__section * 2);
+}
+
+/*--------------------------------------------------------------
+## Section
+--------------------------------------------------------------*/
+.section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.furnishop-front-page .section-heading {
+    text-align: center;
+    
+    h1, h2, h3, h4, h5, h6 {
+        @include font-size(0.875);
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+/*--------------------------------------------------------------
+## Wrappers
+--------------------------------------------------------------*/
+@import "layout/wrappers";

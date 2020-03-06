@@ -1,0 +1,252 @@
+/*shop navigation*/
+.menu-shop {
+    width: 270px;
+    
+    @media screen and (min-width: $bp__lg) {
+        padding-right: 0;
+    }
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        background: $color__main-primary;
+        position: relative;
+        border-top-left-radius: 6px; 
+        border-top-right-radius: 6px;
+        
+        // &.opened {
+        //     border-bottom-left-radius: 0; 
+        //     border-bottom-right-radius: 0;
+            
+        //     ul {
+        //         border-top-left-radius: 0;
+        //         border-top-right-radius: 0;
+        //     }
+        // }
+
+        // .furnishop-front-page & {
+        //     border-bottom-left-radius: 6px; 
+        //     border-bottom-right-radius: 6px;
+
+        //     @media screen and (min-width: $bp__lg) {
+        //         border-bottom-left-radius: 0; 
+        //         border-bottom-right-radius: 0;
+        //     }
+        // }
+        
+        ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding-top: 6px;
+            padding-bottom: 15px;
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+            //margin-top: -5px;
+            z-index: 100;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            
+            @media screen and (min-width: $bp__lg) {
+                //display: block;
+                padding-top: 10px;
+            }
+            
+            a {
+                font-weight: $font__normal;
+                background: transparent;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+                &:hover {
+                    background: darken($color__main-primary, 10%);
+                    font-weight: $font__bold;
+                }
+                
+                &:before {
+                    content: '';
+                }
+            }
+            
+            li.current-menu-item a {
+                font-weight: $font__bold;
+            }
+            
+            .furnishop-front-page & {
+                //display: none;
+                
+                @media screen and (min-width: $bp__lg) {
+                    display: block;
+                    // border-bottom-left-radius: 6px; 
+                    // border-bottom-right-radius: 6px;
+                }
+            }
+        }
+    }
+    
+    li {
+        
+        a {
+            @include font-size(0.875);
+            color: #fff;
+            font-weight: $font__bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative;
+            outline: none;
+            
+            &:before {
+                content: '\f078';
+                font-family: FontAwesome;
+                @include font-size(0.875);
+                color: #fff;
+                font-weight: $font__normal;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+            }
+            
+            @media screen and (min-width: $bp__sm) {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+            
+            @media screen and (min-width: $bp__lg) {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }  
+    }
+}
+
+/*search form*/
+.serch-header__widget {
+    display: none;
+    
+    @media screen and (min-width: $bp__sm) {
+        display: block;
+    }
+}
+
+.header-search {
+    width: auto;
+    margin-left: auto;
+    padding-right: 5px;
+    
+    @media screen and (min-width: $bp__lg) {
+        padding-left: 0;
+        padding-right: 15px;
+    }
+    
+    .woocommerce-product-search {
+        position: absolute;
+        top: 36px;
+        right: 0;
+        width: 250px;
+        z-index: 10;
+        
+        @media screen and (min-width: $bp__sm) {
+            position: relative;
+            width: auto;
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    .search-toggle {
+        background: $color__main-black;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+        
+        i {
+            color: #fff;
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include transition;
+        }
+        
+        &:hover i {
+            color: $color__interactive;
+        }
+        
+        @media screen and (min-width: $bp__sm) {
+            display: none;
+        }
+    }
+}
+
+/*account icon*/
+.woocommerce-account {
+    padding-right: 15px;
+    
+    @media screen and (min-width: $bp__lg) {
+        display: none;
+    }
+    
+    .account-icon {
+        color: #fff;
+        line-height: 30px;
+        text-align: center;
+        background: $color__main-black;
+        border-radius: 4px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        
+        @media screen and (min-width: $bp__sm) {
+            line-height: 40px;
+            height: 37px;
+            width: 40px;
+        }
+        
+        &:hover {
+            color: $color__interactive;
+        }
+    }
+    
+    .account-contents {
+        display: none;
+        position: absolute;
+        right: 15px;
+        top: 100%;
+        border: 2px solid #f5f5f5;
+        background-color: #ffffff;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 148px;
+        line-height: 2;
+        z-index: 9995;
+    }
+    
+    .account-link {
+        @include font-size(0.75);
+        
+        a {
+            color: $color__text-main;
+            display: block;
+            
+            &:hover {
+                color: $color__interactive;
+                text-decoration: none;
+            }
+        }
+    }
+}

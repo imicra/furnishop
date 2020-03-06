@@ -1,0 +1,90 @@
+.section-heading {
+    i {
+        @include font-size(2.3);
+        opacity: .7;
+    }
+}
+
+.furnishop-front-page .hentry .entry-title {
+    @include font-size(1);
+    text-align: center;
+
+    &:before {
+        content: '';
+        background: url(images/logo-icon.png) no-repeat;
+        background-size: contain;
+        width: 130px;
+        height: 38px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        opacity: .4;
+    }
+}
+
+.entry-header {
+    padding-top: $padding__section;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+    padding-top: $padding__section;
+    padding-bottom: $padding__section;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.furnishop-front-page .post-thumbnail {
+    max-width: 268px;
+    @include center-block;
+}
+
+.page-template-page-contacts .entry-content {
+    ul {
+        @include font-size(0.875);
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        padding-bottom: 40px;
+        
+        @media screen and (min-width: $bp__md) {
+            @include font-size(1);
+        }
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+
+            i {
+                @include font-size(2);
+                color: $color__main-primary;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

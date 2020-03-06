@@ -1,0 +1,243 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/*header-widgets*/
+.header-widget__item {
+    @include font-size(0.875);
+    line-height: 1;
+    padding-top: 12px;
+
+    .textwidget {
+        padding-left: 50px;
+    }
+
+    p {
+        margin-bottom: 3px;
+    }
+
+    b, strong {
+        @include font-size(1.125);
+        color: $color__text-heading;
+    }
+
+    a {
+        color: $color__text-main;
+        text-decoration: underline;
+
+        &:hover {
+            color: $color__interactive;
+        }
+    }
+
+    .button {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+/*topbar-widgets*/
+.topbar-widget__item {
+    @include font-size(0.7);
+    line-height: 1;
+    display: inline-block;
+    padding-left: 15px;
+
+    @media screen and (min-width: $bp__sm) {
+        @include font-size(0.8);
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    p {
+        margin-bottom: 3px;
+    }
+
+    b, strong {
+        color: $color__text-heading;
+    }
+
+    a {
+        color: $color__text-main;
+        text-decoration: underline;
+    }
+
+    .button {
+        @include font-size(0.8);
+        color: #fff;
+        text-decoration: none;
+        padding: 3px 20px;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+/* Modal widget stylings */
+.modal-widget {
+
+    .modal-widget__item {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .modal-widget__title {
+        font-size: 1.125em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        max-width: 370px;
+
+        div.wpcf7-response-output,
+        div.wpcf7-validation-errors {
+            display: none !important;
+        }
+
+        span.wpcf7-not-valid-tip {
+            @include font-size(0.75);
+            font-weight: $font__bold;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+
+        &.no-margin {
+            margin: 0;
+        }
+
+        br {
+            display: none;
+        }
+
+        label {
+            font-size: 1em;
+            color: $color__text-main;
+            font-weight: $font__bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .required {
+            color: #790000;
+            margin-left: 4px;
+            font-weight: $font__bold;
+        }
+
+        input, textarea {
+            font-size: .875em;
+            padding: .5em;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 1.125em 1.25em;
+            @include font-size(0.875);
+            color: #fff;
+            font-weight: $font__bold;
+            letter-spacing: 1px;
+
+            &:hover {
+                background: $color__interactive;
+            }
+
+            &:disabled {
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+/*Service widget stylings*/
+.site-main .our-service-inner {
+    background: $color__main-secondary;
+
+    .box-widget__item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+
+        @media screen and (min-width: $bp__md) {
+            display: flex;
+        }
+
+        .box-inner {
+            color: $color__text-heading;
+            position: relative;
+            padding: 23px 0 23px 107px;
+            //display: inline-block;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+
+            .box-widget__title {
+                @include font-size(0.7);
+                font-weight: $font__bold;
+            }
+
+            p {
+                font-size: .8em;
+                margin-bottom: 0;
+            }
+
+            i {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                @include font-size(4);
+                transform: translate(0,-50%);
+
+                &:before {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100px;
+                    height: 100px;
+                    background: #fff;
+                    border-radius: 50%;
+                    z-index: 0;
+                }
+            }
+
+            @media screen and (min-width: $bp__xs) {
+                .box-widget__title {
+                    @include font-size(1);
+                }
+
+                p {
+                    @include font-size(0.875);
+                }
+            }
+
+            @media screen and (min-width: $bp__md) and (max-width: $bp__lg) {
+                .box-widget__title {
+                    @include font-size(0.7);
+                }
+
+                p {
+                    font-size: .8em;
+                }
+            }
+        }
+    }
+}

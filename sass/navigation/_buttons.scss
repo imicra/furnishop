@@ -1,0 +1,90 @@
+a.button {
+    border-radius: 30px;
+    background: $color__background-button;
+    color: #fff;
+    @include font-size(0.875);
+    font-weight: $font__bold;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-decoration: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    display: inline-block;
+    @include transition;
+    
+    &:hover,
+    &:active,
+    &:focus {
+        color: #fff;
+        text-decoration: none;
+        background: darken($color__background-button, 10%);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+    
+    &.small {
+        border-radius: 20px;
+        padding: 5px 10px;
+    }
+    
+    &.shadow {
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    &.main {
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color__text-heading;
+            background: $color__main-secondary;
+        }
+    }
+    
+    &.white {
+        color: $color__main-black;
+        background: #fff;
+        
+        &:hover {
+            color: #fff;
+            background: $color__main-black;
+        }
+    }
+}
+
+/**
+ * Button cart page
+ */
+.woocommerce-page .wc-backward {
+    @include font-size(0.75);
+    color: #ffffff !important;
+    font-weight: $font__normal;
+    background: $color__interactive;
+    border-radius: 6px;
+    margin: 0 2px 5px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $color__main-black;
+    }
+    
+    &:before {
+        font-family: 'FontAwesome';
+        speak: none;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        margin-right: 7px;
+        content: '\f060';
+    }
+}
+
+.button:disabled {
+    opacity: 0.5!important;
+    cursor: not-allowed !important;
+}

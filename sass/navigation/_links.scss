@@ -1,0 +1,16 @@
+a {
+	color: $color__link;
+	text-decoration: none;
+        @include transition();
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken($color__link-hover, 10%);
+		text-decoration: underline;
+		outline: 0;
+	}
+}

@@ -1,0 +1,76 @@
+/*.swal-button {
+    background: $color__interactive;
+    color: #000;
+    
+    &:active,
+    &:focus {
+            background: $color__interactive;
+            outline: none;
+    }
+}
+
+.swal-title {
+    color: $color__text-heading;
+}
+
+.swal-text {
+    color: $color__text-main;
+    text-align: center;
+}
+
+.swal-footer {
+    text-align: center;
+}*/
+
+
+    .swal-overlay {
+        background-color: transparent;
+    }
+    
+    .swal-modal {
+        border: 1px solid #e4e4e4;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
+        width: auto;
+    }
+    
+    .swal-title {
+        margin: 0px;
+        @include font-size(0.875);
+        text-transform: uppercase;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+        margin-bottom: 28px;
+    }
+    
+    .swal-footer {
+        background-color: $color__bg-primary;
+        text-align: center;
+        margin-top: 32px;
+        padding: 10px 15px;
+        border-top: 1px solid #E9EEF1;
+        overflow: hidden;
+    }
+    
+    .swal-button {
+        border-radius: 4px;
+        background: $color__background-button;
+        color: #fff;
+        @include font-size(0.875);
+        font-weight: $font__bold;
+        letter-spacing: 1px;
+        line-height: 1;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: inline-block;
+        @include transition;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #fff;
+            text-decoration: none;
+            background: darken($color__background-button, 10%);
+        }
+    }

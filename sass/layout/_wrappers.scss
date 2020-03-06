@@ -1,0 +1,8 @@
+.theme-wrapper {
+    max-width: $size__max-width;
+    position: relative;
+    
+    @media screen and (min-width: $bp__xl) {
+        margin: 0 auto;
+    }
+}

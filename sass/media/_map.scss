@@ -1,0 +1,6 @@
+.map-wrapper {
+    @media screen and (max-width: $bp__md) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
